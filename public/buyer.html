@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Discover local finds — Commonplace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="app-page">
+
+    <header class="app-header">
+
+        <a class="brand" href="index.html">
+            <span class="brand-mark">c</span>
+            <span>
+                commonplace<span class="brand-dot">.</span>
+            </span>
+        </a>
+
+        <nav class="main-nav">
+            <a class="nav-link active" href="buyer.html">Discover</a>
+            <a class="nav-link" href="seller.html">Sell with us</a>
+        </nav>
+
+        <div class="header-actions">
+
+            <button class="icon-button" aria-label="Notifications">
+                ♧
+                <i class="notification-dot"></i>
+            </button>
+
+            <button class="profile-chip">
+                <span class="profile-avatar">J</span>
+                <span>Jordan</span>
+                <span class="chevron">⌄</span>
+            </button>
+
+        </div>
+
+    </header>
+
+    <main class="buyer-main page-wrap">
+
+        <section class="buyer-hero">
+
+            <div>
+
+                <span class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    YOUR NEIGHBOURHOOD, REIMAGINED
+                </span>
+
+                <h1>
+                    Good finds are<br>
+                    <span>closer than you think.</span>
+                </h1>
+
+                <p>
+                    Thoughtful finds from people around you.
+                    Browse local, buy with confidence.
+                </p>
+
+            </div>
+
+            <div class="hero-sticker">
+                <span>✳</span>
+                <small>
+                    LOCAL<br>
+                    LOOKS GOOD<br>
+                    ON YOU
+                </small>
+            </div>
+
+        </section>
+
+        <section class="search-row">
+
+            <label class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="search"
+                    id="product-search"
+                    placeholder="Search for something lovely…"
+                >
+
+                <kbd>/</kbd>
+
+            </label>
+
+            <button class="location-button">
+                ⌖
+                <span>Campus & nearby</span>
+                <b>⌄</b>
+            </button>
+
+        </section>
+
+        <section class="category-row" aria-label="Product categories">
+
+            <button class="category-pill selected" data-category="All">
+                ✦ <span>Everything</span>
+            </button>
+
+            <button class="category-pill" data-category="Home">
+                ⌂ <span>Home</span>
+            </button>
+
+            <button class="category-pill" data-category="Electronics">
+                ⌁ <span>Tech</span>
+            </button>
+
+            <button class="category-pill" data-category="Clothing">
+                ◉ <span>Style</span>
+            </button>
+
+            <button class="category-pill" data-category="Books">
+                ▤ <span>Books</span>
+            </button>
+
+            <button class="category-pill" data-category="Other">
+                ✳ <span>More</span>
+            </button>
+
+        </section>
+
+        <section class="listing-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="tiny-label">
+                        A LITTLE LOCAL INSPIRATION
+                    </span>
+
+                    <h2>
+                        Picked for you
+                        <span class="heading-spark">✦</span>
+                    </h2>
+                </div>
+
+                <button class="sort-button">
+                    Recently added <span>⌄</span>
+                </button>
+
+            </div>
+
+            <div class="product-grid" id="product-grid">
+
+                <article
+                    class="product-card"
+                    data-category="Home"
+                    data-name="Woven weekend tote"
+                >
+
+                    <div class="product-art product-art-terracotta">
+
+                        <span class="product-tag">
+                            COMMUNITY PICK
+                        </span>
+
+                        <span class="product-emoji">👜</span>
+
+                        <button
+                            class="heart-button"
+                            aria-label="Save Woven weekend tote"
+                        >
+                            ♡
+                        </button>
+
+                        <span class="art-caption">
+                            made for<br>
+                            everyday
+                        </span>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-title-row">
+                            <h3>Woven weekend tote</h3>
+                            <strong>KSh 1,200</strong>
+                        </div>
+
+                        <p>Handwoven · like new</p>
+
+                        <div class="seller-line">
+
+                            <span class="seller-avatar sage">M</span>
+
+                            <span>
+                                Maya N.
+                                <b class="verified-dot">✓</b>
+                            </span>
+
+                            <span class="seller-location">
+                                0.8 km away
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article
+                    class="product-card"
+                    data-category="Electronics"
+                    data-name="Studio headphones"
+                >
+
+                    <div class="product-art product-art-lilac">
+
+                        <span class="product-emoji">🎧</span>
+
+                        <button
+                            class="heart-button"
+                            aria-label="Save Studio headphones"
+                        >
+                            ♡
+                        </button>
+
+                        <span class="art-caption">
+                            your next<br>
+                            soundtrack
+                        </span>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-title-row">
+                            <h3>Studio headphones</h3>
+                            <strong>KSh 3,800</strong>
+                        </div>
+
+                        <p>Wireless · great condition</p>
+
+                        <div class="seller-line">
+
+                            <span class="seller-avatar lilac">D</span>
+
+                            <span>David K.</span>
+
+                            <span class="seller-location">
+                                1.2 km away
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article
+                    class="product-card"
+                    data-category="Books"
+                    data-name="The creative act"
+                >
+
+                    <div class="product-art product-art-green">
+
+                        <span class="product-emoji">📚</span>
+
+                        <button
+                            class="heart-button"
+                            aria-label="Save The creative act"
+                        >
+                            ♡
+                        </button>
+
+                        <span class="art-caption">
+                            a good read<br>
+                            lives again
+                        </span>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-title-row">
+                            <h3>The Creative Act</h3>
+                            <strong>KSh 950</strong>
+                        </div>
+
+                        <p>Hardcover · very good</p>
+
+                        <div class="seller-line">
+
+                            <span class="seller-avatar peach">A</span>
+
+                            <span>
+                                Amina W.
+                                <b class="verified-dot">✓</b>
+                            </span>
+
+                            <span class="seller-location">
+                                0.5 km away
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article
+                    class="product-card"
+                    data-category="Clothing"
+                    data-name="Classic denim jacket"
+                >
+
+                    <div class="product-art product-art-blue">
+
+                        <span class="product-emoji">🧥</span>
+
+                        <button
+                            class="heart-button"
+                            aria-label="Save Classic denim jacket"
+                        >
+                            ♡
+                        </button>
+
+                        <span class="art-caption">
+                            a second life<br>
+                            in style
+                        </span>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div class="product-title-row">
+                            <h3>Classic denim jacket</h3>
+                            <strong>KSh 2,100</strong>
+                        </div>
+
+                        <p>Size M · gently loved</p>
+
+                        <div class="seller-line">
+
+                            <span class="seller-avatar blue">L</span>
+
+                            <span>Leo M.</span>
+
+                            <span class="seller-location">
+                                2.0 km away
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p class="empty-state" id="empty-state" hidden>
+                No finds match that search yet.
+                Try another word or category.
+            </p>
+
+        </section>
+
+        <section class="community-banner">
+
+            <span class="banner-flower">✳</span>
+
+            <div>
+                <h2>Every good find has a story.</h2>
+                <p>Make yours part of the neighbourhood.</p>
+            </div>
+
+            <a class="button button-dark" href="seller.html">
+                Start selling <span>↗</span>
+            </a>
+
+        </section>
+
+    </main>
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+    <script>
+
+        const cards = [
+            ...document.querySelectorAll('.product-card')
+        ];
+
+        let activeCategory = 'All';
+
+        const search = document.querySelector('#product-search');
+
+        function filter() {
+
+            const q = search.value.trim().toLowerCase();
+
+            let shown = 0;
+
+            cards.forEach((card) => {
+
+                const matchCategory =
+                    activeCategory === 'All' ||
+                    card.dataset.category === activeCategory;
+
+                const matchSearch =
+                    card.dataset.name.toLowerCase().includes(q) ||
+                    card.dataset.category.toLowerCase().includes(q);
+
+                card.hidden = !(matchCategory && matchSearch);
+
+                if (!card.hidden) {
+                    shown++;
+                }
+
+            });
+
+            document.querySelector('#empty-state').hidden = shown > 0;
+
+        }
+
+        document.querySelectorAll('.category-pill').forEach((button) => {
+
+            button.addEventListener('click', () => {
+
+                activeCategory = button.dataset.category;
+
+                document.querySelectorAll('.category-pill').forEach((b) => {
+
+                    b.classList.toggle('selected', b === button);
+
+                });
+
+                filter();
+
+            });
+
+        });
+
+        search.addEventListener('input', filter);
+
+        document.querySelectorAll('.heart-button').forEach((button) => {
+
+            button.addEventListener('click', () => {
+
+                button.classList.toggle('saved');
+
+                button.textContent =
+                    button.classList.contains('saved') ? '♥' : '♡';
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

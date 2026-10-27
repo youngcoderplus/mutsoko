@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your seller studio — Commonplace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="app-page">
+
+    <header class="app-header">
+
+        <a class="brand" href="index.html">
+            <span class="brand-mark">c</span>
+            <span>
+                commonplace<span class="brand-dot">.</span>
+            </span>
+        </a>
+
+        <nav class="main-nav">
+            <a class="nav-link" href="buyer.html">Discover</a>
+            <a class="nav-link active" href="seller.html">My studio</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="icon-button" aria-label="Notifications">♧</button>
+
+            <button class="profile-chip">
+                <span class="profile-avatar">M</span>
+                <span>Maya</span>
+                <span class="chevron">⌄</span>
+            </button>
+        </div>
+
+    </header>
+
+    <main class="seller-main page-wrap">
+
+        <div class="page-title-row">
+
+            <div>
+                <span class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    YOUR LITTLE CORNER OF THE MARKET
+                </span>
+
+                <h1>
+                    Seller studio<span class="heading-spark">.</span>
+                </h1>
+
+                <p class="page-lede">
+                    A lovely place to share what you have with your community.
+                </p>
+            </div>
+
+            <button class="button button-primary" id="new-listing-button">
+                ＋ Add a listing
+            </button>
+
+        </div>
+
+        <section class="seller-overview">
+
+            <div class="seller-profile-card">
+
+                <div class="seller-profile-top">
+
+                    <div class="large-avatar">M</div>
+
+                    <div>
+                        <h2>
+                            Maya Njeri
+                            <span class="verified-badge">✓ Verified</span>
+                        </h2>
+
+                        <p>Seller since October 2026 · Campus & nearby</p>
+                    </div>
+
+                    <button class="subtle-button">Edit profile</button>
+
+                </div>
+
+                <div class="profile-details">
+
+                    <div>
+                        <span class="detail-label">PHONE NUMBER</span>
+                        <strong>+254 7•• ••• ••21</strong>
+                    </div>
+
+                    <div>
+                        <span class="detail-label">SELLER CHECK</span>
+                        <strong class="status-good">
+                            <i></i> Verified seller
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span class="detail-label">MEMBERSHIP</span>
+                        <strong class="status-good">
+                            <i></i> Active
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <aside class="seller-tip">
+
+                <span class="tip-flower">✳</span>
+                <span class="tiny-label">A GOOD SELLING TIP</span>
+
+                <h3>
+                    Good light makes<br>
+                    great first impressions.
+                </h3>
+
+                <p>
+                    Clear photos help your neighbours picture it in their home.
+                </p>
+
+                <a href="#new-listing-button">
+                    Photo tips <span>↗</span>
+                </a>
+
+            </aside>
+
+        </section>
+
+        <section class="seller-listings">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="tiny-label">
+                        YOUR COMMUNITY SHOP WINDOW
+                    </span>
+
+                    <h2>
+                        Your listings
+                        <span class="count-pill" id="listing-count">3</span>
+                    </h2>
+                </div>
+
+                <div class="listing-filters">
+
+                    <button class="filter-tab active" data-status="all">
+                        All <span>3</span>
+                    </button>
+
+                    <button class="filter-tab" data-status="Approved">
+                        Live <span>2</span>
+                    </button>
+
+                    <button class="filter-tab" data-status="Pending">
+                        In review <span>1</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="seller-listing-table" id="seller-listing-table">
+
+                <div class="table-head">
+                    <span>ITEM</span>
+                    <span>PRICE</span>
+                    <span>STATUS</span>
+                    <span>ADDED</span>
+                    <span></span>
+                </div>
+
+                <article class="seller-listing-row" data-status="Approved">
+
+                    <div class="listing-item-cell">
+
+                        <span class="mini-product mini-tote">👜</span>
+
+                        <div>
+                            <strong>Woven weekend tote</strong>
+                            <small>Home · gently loved</small>
+                        </div>
+
+                    </div>
+
+                    <strong>KSh 1,200</strong>
+
+                    <span class="status-badge status-live">
+                        <i></i> Live
+                    </span>
+
+                    <span class="row-date">Today</span>
+
+                    <button class="more-button" aria-label="More options">
+                        ···
+                    </button>
+
+                </article>
+
+                <article class="seller-listing-row" data-status="Pending">
+
+                    <div class="listing-item-cell">
+
+                        <span class="mini-product mini-lamp">💡</span>
+
+                        <div>
+                            <strong>Little bedside lamp</strong>
+                            <small>Home · good condition</small>
+                        </div>
+
+                    </div>
+
+                    <strong>KSh 850</strong>
+
+                    <span class="status-badge status-review">
+                        <i></i> In review
+                    </span>
+
+                    <span class="row-date">Yesterday</span>
+
+                    <button class="more-button" aria-label="More options">
+                        ···
+                    </button>
+
+                </article>
+
+                <article class="seller-listing-row" data-status="Approved">
+
+                    <div class="listing-item-cell">
+
+                        <span class="mini-product mini-book">📖</span>
+
+                        <div>
+                            <strong>Sunday reading set</strong>
+                            <small>Books · very good</small>
+                        </div>
+
+                    </div>
+
+                    <strong>KSh 1,500</strong>
+
+                    <span class="status-badge status-live">
+                        <i></i> Live
+                    </span>
+
+                    <span class="row-date">Oct 24</span>
+
+                    <button class="more-button" aria-label="More options">
+                        ···
+                    </button>
+
+                </article>
+
+            </div>
+
+            <p class="seller-empty" id="seller-empty" hidden>
+                No listings in this view.
+            </p>
+
+        </section>
+
+        <section class="seller-note">
+
+            <span>✦</span>
+
+            <p>
+                <strong>How listing approval works</strong>
+                <br>
+                New listings stay private while our team checks them.
+                Approved items appear in Discover; you can remove
+                any listing at any time.
+            </p>
+
+        </section>
+
+    </main>
+
+    <dialog class="listing-dialog" id="listing-dialog">
+
+        <form method="dialog" id="listing-form">
+
+            <div class="dialog-top">
+
+                <div>
+                    <span class="tiny-label">SHARE A GOOD FIND</span>
+                    <h2>Add a listing</h2>
+                </div>
+
+                <button
+                    class="dialog-close"
+                    value="cancel"
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <label for="item-name">What are you selling?</label>
+
+            <input
+                class="field"
+                id="item-name"
+                name="name"
+                required
+                placeholder="e.g. Woven weekend tote"
+            >
+
+            <div class="field-pair">
+
+                <div>
+
+                    <label for="item-category">Category</label>
+
+                    <select class="field" id="item-category" required>
+                        <option value="">Choose a category</option>
+                        <option>Home</option>
+                        <option>Electronics</option>
+                        <option>Clothing</option>
+                        <option>Books</option>
+                        <option>Other</option>
+                    </select>
+
+                </div>
+
+                <div>
+
+                    <label for="item-price">Price (KSh)</label>
+
+                    <input
+                        class="field"
+                        id="item-price"
+                        type="number"
+                        min="1"
+                        required
+                        placeholder="0"
+                    >
+
+                </div>
+
+            </div>
+
+            <label for="item-description">A little description</label>
+
+            <textarea
+                class="field"
+                id="item-description"
+                rows="3"
+                placeholder="Condition, size, or anything useful to know"
+            ></textarea>
+
+            <label class="upload-box" for="item-photo">
+
+                <span class="upload-icon">↑</span>
+
+                <strong id="upload-label">Add a photo</strong>
+
+                <small>
+                    JPG or PNG · photo stays private until approved
+                </small>
+
+                <input
+                    id="item-photo"
+                    type="file"
+                    accept="image/png,image/jpeg"
+                >
+
+            </label>
+
+            <div class="dialog-actions">
+
+                <button class="button button-secondary" value="cancel">
+                    Cancel
+                </button>
+
+                <button
+                    class="button button-primary"
+                    id="submit-listing"
+                    type="submit"
+                >
+                    Send for review <span>↗</span>
+                </button>
+
+            </div>
+
+        </form>
+
+    </dialog>
+
+    <div
+        class="toast"
+        id="toast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+    <script>
+
+        const dialog = document.querySelector('#listing-dialog');
+
+        const toast = (message) => {
+
+            const box = document.querySelector('#toast');
+
+            box.textContent = message;
+            box.classList.add('visible');
+
+            setTimeout(() => {
+                box.classList.remove('visible');
+            }, 3600);
+
+        };
+
+        document
+            .querySelector('#new-listing-button')
+            .addEventListener('click', () => {
+                dialog.showModal();
+            });
+
+        document
+            .querySelector('#item-photo')
+            .addEventListener('change', (event) => {
+
+                if (event.target.files[0]) {
+                    document.querySelector('#upload-label').textContent =
+                        event.target.files[0].name;
+                }
+
+            });
+
+        document
+            .querySelector('#listing-form')
+            .addEventListener('submit', (event) => {
+
+                event.preventDefault();
+
+                dialog.close();
+
+                toast(
+                    'Listing saved as pending. Server upload and admin review will be connected next.'
+                );
+
+                event.target.reset();
+
+                document.querySelector('#upload-label').textContent =
+                    'Add a photo';
+
+            });
+
+        document.querySelectorAll('.filter-tab').forEach((tab) => {
+
+            tab.addEventListener('click', () => {
+
+                document.querySelectorAll('.filter-tab').forEach((item) => {
+
+                    item.classList.toggle('active', item === tab);
+
+                });
+
+                let count = 0;
+
+                document.querySelectorAll('.seller-listing-row').forEach((row) => {
+
+                    const show =
+                        tab.dataset.status === 'all' ||
+                        row.dataset.status === tab.dataset.status;
+
+                    row.hidden = !show;
+
+                    if (show) {
+                        count++;
+                    }
+
+                });
+
+                document.querySelector('#seller-empty').hidden = count > 0;
+
+            });
+
+        });
+
+        document.querySelectorAll('.more-button').forEach((button) => {
+
+            button.addEventListener('click', () => {
+
+                toast(
+                    'Listing actions will be connected to the server next.'
+                );
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
