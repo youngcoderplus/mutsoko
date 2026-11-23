@@ -1,394 +1,312 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f7f8f5">
-
-    <title>Commonplace — local finds, closer to home</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Commonplace — local finds, closer to home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .guest-link {
+      display: block;
+      margin: 16px auto 0;
+      border: 0;
+      background: transparent;
+      color: #315b46;
+      font: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .auth-message {
+      min-height: 17px;
+      margin: 10px 0 0;
+      color: #a14f43;
+      font-size: 10px;
+    }
+    .auth-message.success { color: #315b46; }
+    .auth-mode {
+      display: flex;
+      gap: 8px;
+      margin: 16px 0 4px;
+    }
+    .auth-mode button {
+      flex: 1;
+      min-height: 34px;
+      border: 1px solid #e5e7e1;
+      border-radius: 7px;
+      background: white;
+      color: #777d72;
+      font-size: 10px;
+      cursor: pointer;
+    }
+    .auth-mode button.active {
+      border-color: #d5e1d1;
+      background: #edf2e9;
+      color: #315b46;
+      font-weight: 700;
+    }
+    .signup-fields[hidden] { display: none; }
+  </style>
 </head>
-
 <body class="welcome-page">
-
-    <header class="site-header wrap">
-
-        <a class="brand" href="index.html">
-            <span class="brand-mark">c</span>
-            <span>
-                commonplace<span class="brand-dot">.</span>
-            </span>
-        </a>
-
-        <span class="header-note">
-            A marketplace for our community
-        </span>
-
-    </header>
-
-    <main class="welcome-layout wrap">
-
-        <section class="welcome-copy">
-
-            <div class="eyebrow">
-                <span class="eyebrow-line"></span>
-                GOOD THINGS, RIGHT AROUND YOU
-            </div>
-
-            <h1>
-                Find it.<br>
-                <span>Love it.</span><br>
-                Keep it local.
-            </h1>
-
-            <p class="welcome-intro">
-                Discover useful finds from students and trusted sellers
-                in your community. A more thoughtful way to buy and
-                sell, close to home.
-            </p>
-
-            <div class="welcome-proof">
-
-                <div class="avatar-stack">
-                    <span>JM</span>
-                    <span>AK</span>
-                    <span>LW</span>
-                </div>
-
-                <p>
-                    <strong>Made for our community</strong>
-                    <br>
-                    <span>
-                        Local people. Real finds. Better connections.
-                    </span>
-                </p>
-
-            </div>
-
-            <div class="welcome-art" aria-hidden="true">
-
-                <span class="art-sun"></span>
-
-                <span class="art-leaf leaf-one">✳</span>
-
-                <span class="art-leaf leaf-two">✳</span>
-
-                <div class="art-card">
-
-                    <span class="art-spark">✦</span>
-
-                    <span>
-                        good finds<br>
-                        live nearby
-                    </span>
-
-                    <span class="art-arrow">↗</span>
-
-                </div>
-
-                <div class="art-orbit"></div>
-
-            </div>
-
-        </section>
-
-        <section class="auth-card" aria-labelledby="auth-heading">
-
-            <div class="auth-top">
-
-                <span class="tiny-label">
-                    YOUR COMMUNITY MARKET
-                </span>
-
-                <span class="online-pill">
-                    <i></i> OPEN TO EVERYONE
-                </span>
-
-            </div>
-
-            <h2 id="auth-heading">
-                Come on in<span>.</span>
-            </h2>
-
-            <p class="auth-subtitle">
-                Choose how you’d like to use Commonplace.
-            </p>
-
-            <div
-                class="auth-tabs"
-                role="tablist"
-                aria-label="Account type"
-            >
-
-                <button
-                    class="auth-tab active"
-                    type="button"
-                    role="tab"
-                    aria-selected="true"
-                    data-role="buyer"
-                >
-                    I’m here to buy
-                </button>
-
-                <button
-                    class="auth-tab"
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    data-role="seller"
-                >
-                    I’m here to sell
-                </button>
-
-            </div>
-
-            <form id="auth-form" class="auth-form">
-
-                <label for="email">
-                    Email address
-                </label>
-
-                <div class="input-wrap">
-
-                    <span class="input-icon">✉</span>
-
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="you@example.com"
-                        autocomplete="email"
-                        required
-                    >
-
-                </div>
-
-                <label for="password">
-                    Password
-                </label>
-
-                <div class="input-wrap">
-
-                    <span class="input-icon">⌑</span>
-
-                    <input
-                        id="password"
-                        name="password"
-                        type="password"
-                        placeholder="Enter your password"
-                        autocomplete="current-password"
-                        required
-                    >
-
-                    <button
-                        class="show-password"
-                        type="button"
-                    >
-                        Show
-                    </button>
-
-                </div>
-
-                <div class="form-options">
-
-                    <label class="check-label">
-
-                        <input
-                            type="checkbox"
-                            name="remember"
-                        >
-
-                        <span>Remember me</span>
-
-                    </label>
-
-                    <a
-                        href="#"
-                        class="text-link"
-                        id="forgot-link"
-                    >
-                        Forgot password?
-                    </a>
-
-                </div>
-
-                <button
-                    class="button button-primary button-wide"
-                    type="submit"
-                >
-
-                    <span id="submit-label">
-                        Continue as a buyer
-                    </span>
-
-                    <span aria-hidden="true">↗</span>
-
-                </button>
-
-            </form>
-
-            <div class="auth-divider">
-                <span></span>
-                NEW TO COMMONPLACE?
-                <span></span>
-            </div>
-
-            <button
-                class="button button-secondary button-wide"
-                id="signup-button"
-                type="button"
-            >
-
-                Create a
-                <span id="signup-role">buyer</span>
-                account
-
-                <span aria-hidden="true">＋</span>
-
-            </button>
-
-            <p class="auth-footnote">
-
-                By continuing, you agree to our
-
-                <a href="#">Terms</a>
-
-                and
-
-                <a href="#">Privacy Policy</a>.
-
-            </p>
-
-        </section>
-
-    </main>
-
-    <footer class="site-footer wrap">
-
-        <span>© 2026 Commonplace</span>
-
-        <span>
-            Better commerce, closer to home
-            <b>✳</b>
-        </span>
-
-    </footer>
-
-    <div
-        class="toast"
-        id="toast"
-        role="status"
-        aria-live="polite"
-    ></div>
-
-    <script>
-
-        let selectedRole = 'buyer';
-
-        const toast = (message) => {
-
-            const box = document.querySelector('#toast');
-
-            box.textContent = message;
-
-            box.classList.add('visible');
-
-            setTimeout(() => {
-                box.classList.remove('visible');
-            }, 3400);
-
-        };
-
-        document.querySelectorAll('.auth-tab').forEach((tab) => {
-
-            tab.addEventListener('click', () => {
-
-                selectedRole = tab.dataset.role;
-
-                document.querySelectorAll('.auth-tab').forEach((item) => {
-
-                    const active = item === tab;
-
-                    item.classList.toggle('active', active);
-
-                    item.setAttribute('aria-selected', active);
-
-                });
-
-                document.querySelector('#submit-label').textContent =
-                    `Continue as a ${selectedRole}`;
-
-                document.querySelector('#signup-role').textContent =
-                    selectedRole;
-
-            });
-
+  <header class="site-header wrap">
+    <a class="brand" href="index.html" aria-label="Commonplace home">
+      <span class="brand-mark">c</span>
+      <span>commonplace<span class="brand-dot">.</span></span>
+    </a>
+    <span class="header-note">A marketplace for our community</span>
+  </header>
+
+  <main class="welcome-layout wrap">
+    <section class="welcome-copy">
+      <div class="eyebrow">
+        <span class="eyebrow-line"></span>
+        GOOD THINGS, RIGHT AROUND YOU
+      </div>
+
+      <h1>Find it.<br><span>Love it.</span><br>Keep it local.</h1>
+
+      <p class="welcome-intro">
+        Discover useful finds from students and trusted sellers in your
+        community. Browse freely, then sign in when you’re ready to contact
+        a seller.
+      </p>
+
+      <div class="welcome-proof">
+        <div class="avatar-stack" aria-hidden="true">
+          <span>JM</span><span>AK</span><span>LW</span>
+        </div>
+        <p>
+          <strong>Made for our community</strong><br>
+          <span>Local people. Real finds. Better connections.</span>
+        </p>
+      </div>
+
+      <div class="welcome-art" aria-hidden="true">
+        <span class="art-sun"></span>
+        <span class="art-leaf leaf-one">✳</span>
+        <span class="art-leaf leaf-two">✳</span>
+        <div class="art-card">
+          <span class="art-spark">✦</span>
+          <span>good finds<br>live nearby</span>
+          <span class="art-arrow">↗</span>
+        </div>
+        <div class="art-orbit"></div>
+      </div>
+    </section>
+
+    <section class="auth-card" aria-labelledby="auth-heading">
+      <div class="auth-top">
+        <span class="tiny-label">YOUR COMMUNITY MARKET</span>
+        <span class="online-pill"><i></i> OPEN TO EVERYONE</span>
+      </div>
+
+      <h2 id="auth-heading">Welcome<span>.</span></h2>
+      <p class="auth-subtitle">
+        Browse as a guest or sign in to continue.
+      </p>
+
+      <div class="auth-mode" aria-label="Choose account action">
+        <button type="button" class="active" data-mode="login">Sign in</button>
+        <button type="button" data-mode="register">Create account</button>
+      </div>
+
+      <div class="auth-tabs" role="group" aria-label="Account type">
+        <button class="auth-tab active" type="button" data-role="buyer">
+          I’m a buyer
+        </button>
+        <button class="auth-tab" type="button" data-role="seller">
+          I’m a seller
+        </button>
+      </div>
+
+      <form id="auth-form" class="auth-form">
+        <div class="signup-fields" id="signup-fields" hidden>
+          <label for="name">Your name</label>
+          <div class="input-wrap">
+            <span class="input-icon">♙</span>
+            <input id="name" name="name" type="text" autocomplete="name"
+                   placeholder="Your full name">
+          </div>
+
+          <label for="phone">Phone number</label>
+          <div class="input-wrap">
+            <span class="input-icon">☎</span>
+            <input id="phone" name="phone" type="tel" autocomplete="tel"
+                   placeholder="+254 7XX XXX XXX">
+          </div>
+        </div>
+
+        <label for="email">Email address</label>
+        <div class="input-wrap">
+          <span class="input-icon">✉</span>
+          <input id="email" name="email" type="email" required
+                 autocomplete="email" placeholder="you@example.com">
+        </div>
+
+        <label for="password">Password</label>
+        <div class="input-wrap">
+          <span class="input-icon">⌑</span>
+          <input id="password" name="password" type="password" required
+                 autocomplete="current-password" minlength="8"
+                 placeholder="At least 8 characters">
+          <button class="show-password" type="button" id="show-password">
+            Show
+          </button>
+        </div>
+
+        <p class="auth-message" id="auth-message" role="status"
+           aria-live="polite"></p>
+
+        <button class="button button-primary button-wide" type="submit">
+          <span id="submit-label">Sign in</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+      </form>
+
+      <button class="guest-link" type="button" id="browse-guest">
+        Continue browsing as a guest →
+      </button>
+
+      <p class="auth-footnote">
+        No payment is made on this platform. Purchases are arranged directly
+        with sellers.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span>© 2026 Commonplace</span>
+    <span>Better commerce, closer to home <b>✳</b></span>
+  </footer>
+
+  <script>
+    const form = document.querySelector('#auth-form');
+    const message = document.querySelector('#auth-message');
+    const signupFields = document.querySelector('#signup-fields');
+    const nameInput = document.querySelector('#name');
+    const phoneInput = document.querySelector('#phone');
+    const submitLabel = document.querySelector('#submit-label');
+
+    let mode = 'login';
+    let selectedRole = 'buyer';
+
+    const query = new URLSearchParams(window.location.search);
+    const requestedProduct = query.get('purchase');
+    const safeProductId = requestedProduct && /^\d+$/.test(requestedProduct)
+      ? requestedProduct
+      : '';
+
+    document.querySelector('#browse-guest').addEventListener('click', () => {
+      window.location.href = '/buyer.html';
+    });
+
+    document.querySelectorAll('.auth-mode button').forEach(button => {
+      button.addEventListener('click', () => {
+        mode = button.dataset.mode;
+
+        document.querySelectorAll('.auth-mode button').forEach(item => {
+          item.classList.toggle('active', item === button);
         });
 
-        document
-            .querySelector('#auth-form')
-            .addEventListener('submit', (event) => {
+        const registering = mode === 'register';
+        signupFields.hidden = !registering;
+        nameInput.required = registering;
+        phoneInput.required = registering;
+        submitLabel.textContent = registering ? 'Create account' : 'Sign in';
+        message.textContent = '';
+        message.classList.remove('success');
+      });
+    });
 
-                event.preventDefault();
+    document.querySelectorAll('.auth-tab').forEach(button => {
+      button.addEventListener('click', () => {
+        selectedRole = button.dataset.role;
 
-                toast(
-                    'Sign-in will connect to the server in the next step.'
-                );
+        document.querySelectorAll('.auth-tab').forEach(item => {
+          item.classList.toggle('active', item === button);
+        });
+      });
+    });
 
-            });
+    document.querySelector('#show-password').addEventListener('click', event => {
+      const password = document.querySelector('#password');
+      const showing = password.type === 'password';
+      password.type = showing ? 'text' : 'password';
+      event.currentTarget.textContent = showing ? 'Hide' : 'Show';
+    });
 
-        document
-            .querySelector('#signup-button')
-            .addEventListener('click', () => {
+    function redirectAfterLogin(role) {
+      if (role === 'admin') {
+        window.location.href = '/admin.html';
+        return;
+      }
 
-                toast(
-                    'Account creation will connect to the server in the next step.'
-                );
+      if (role === 'seller') {
+        window.location.href = '/seller.html';
+        return;
+      }
 
-            });
+      const destination = safeProductId
+        ? `/buyer.html?purchase=${encodeURIComponent(safeProductId)}`
+        : '/buyer.html';
 
-        document
-            .querySelector('#forgot-link')
-            .addEventListener('click', (event) => {
+      window.location.href = destination;
+    }
 
-                event.preventDefault();
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      message.textContent = '';
+      message.classList.remove('success');
 
-                toast(
-                    'Password reset will be added with the account system.'
-                );
+      const body = {
+        email: document.querySelector('#email').value.trim(),
+        password: document.querySelector('#password').value
+      };
 
-            });
+      let endpoint = '/api/auth/login';
 
-        document
-            .querySelector('.show-password')
-            .addEventListener('click', (event) => {
+      if (mode === 'register') {
+        endpoint = '/api/auth/register';
+        body.name = nameInput.value.trim();
+        body.phone = phoneInput.value.trim();
+        body.role = selectedRole;
+      }
 
-                const field = document.querySelector('#password');
+      submitLabel.textContent = mode === 'register'
+        ? 'Creating account…'
+        : 'Signing in…';
 
-                field.type =
-                    field.type === 'password'
-                        ? 'text'
-                        : 'password';
+      try {
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify(body)
+        });
 
-                event.currentTarget.textContent =
-                    field.type === 'password'
-                        ? 'Show'
-                        : 'Hide';
+        const result = await response.json().catch(() => ({}));
 
-            });
+        if (!response.ok) {
+          throw new Error(result.message || 'Could not complete that request.');
+        }
 
-    </script>
-
+        const role = result.user?.role || selectedRole;
+        message.textContent = 'Success. Taking you to the marketplace…';
+        message.classList.add('success');
+        redirectAfterLogin(role);
+      } catch (error) {
+        message.textContent =
+          `${error.message} Make sure the backend is running and the API route exists.`;
+      } finally {
+        submitLabel.textContent = mode === 'register'
+          ? 'Create account'
+          : 'Sign in';
+      }
+    });
+  </script>
 </body>
 </html>
